@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ExperienceGo</string>
+
+    //Initial Login
+    <string name="btn_iniciar_sesion">Iniciar Sesion</string>
+    <string name="btn_registrate">Registrate</string>
+    <string name="btn_empresa_sponsor">Empresa/Sponsor</string>
+    //Login
+    <string name="textView_inicio_sesion">Inicio Sesion</string>
 </resources>
