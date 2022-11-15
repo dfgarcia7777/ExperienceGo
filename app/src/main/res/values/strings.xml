@@ -7,4 +7,6 @@
     <string name="btn_empresa_sponsor">Empresa/Sponsor</string>
     //Login
     <string name="textView_inicio_sesion">Inicio Sesion</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

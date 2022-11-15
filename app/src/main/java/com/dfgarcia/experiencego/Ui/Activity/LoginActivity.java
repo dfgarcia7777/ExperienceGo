@@ -1,14 +1,16 @@
-package com.dfgarcia.experiencego;
+package com.dfgarcia.experiencego.Ui.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Login extends AppCompatActivity {
+import com.dfgarcia.experiencego.R;
+
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_login_activity);
     }
 }
