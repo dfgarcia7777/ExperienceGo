@@ -7,7 +7,17 @@
 
     <fragment
         android:id="@+id/logitInitialFrament"
-        android:name="com.dfgarcia.experiencego.Ui.Activity.Fragmentos.LogitInitialFrament"
+        android:name="com.dfgarcia.experiencego.Ui.Activity.Fragmentos.LoginInitialFragment"
         android:label="fragment_logit_initial_frament"
-        tools:layout="@layout/fragment_logit_initial_frament" />
+        tools:layout="@layout/fragment_login_initial_fragment" >
+        <action
+            android:id="@+id/action_logitInitialFrament_to_login_fragment"
+            app:destination="@id/login_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.dfgarcia.experiencego.Ui.Activity.Fragmentos.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login_fragment" />
 </navigation>
