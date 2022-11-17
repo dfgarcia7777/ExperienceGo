@@ -121,7 +121,6 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
-
         android:gravity="center"
         android:hint="@string/textView_password"
         android:inputType="textPassword"
@@ -181,6 +180,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="0dp"
         android:layout_marginTop="10dp"
+
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
         android:backgroundTint="@color/green"

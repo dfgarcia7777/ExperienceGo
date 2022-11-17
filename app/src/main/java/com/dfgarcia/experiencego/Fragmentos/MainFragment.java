@@ -1,5 +1,8 @@
 package com.dfgarcia.experiencego.Fragmentos;
 
+import static androidx.navigation.ActivityKt.findNavController;
+
+import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -21,7 +24,8 @@ import com.dfgarcia.experiencego.databinding.FragmentMainBinding;
  * create an instance of this fragment.
  */
 public class MainFragment extends Fragment {
-private FragmentMainBinding binding;
+    private FragmentMainBinding binding;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -62,6 +66,14 @@ private FragmentMainBinding binding;
         }
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.setReorderingAllowed(true);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -82,7 +94,18 @@ private FragmentMainBinding binding;
                 transaction.commit();
             }
         });
+        binding.btnRegistrate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.setReorderingAllowed(true);
 
+                transaction.replace(R.id.nav_host_fragment_content_main,RegistrateFragment.class,null);
+                transaction.commit();
+
+            }
+        });
         return binding.getRoot();    }
 
     /**
