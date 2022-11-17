@@ -12,10 +12,35 @@
         <action
             android:id="@+id/action_mainFragment_to_loginFragment2"
             app:destination="@id/loginFragment2" />
+        <action
+            android:id="@+id/action_mainFragment_to_registrateFragment"
+            app:destination="@id/registrateFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_empresaSponsorFragment"
+            app:destination="@id/empresaSponsorFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment2"
         android:name="com.dfgarcia.experiencego.Fragmentos.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+
+        <action
+            android:id="@+id/action_loginFragment2_to_registrateFragment"
+            app:destination="@id/registrateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrateFragment"
+        android:name="com.dfgarcia.experiencego.Fragmentos.RegistrateFragment"
+        android:label="fragment_registrate"
+        tools:layout="@layout/fragment_registrate" >
+        <action
+            android:id="@+id/action_registrateFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/empresaSponsorFragment"
+        android:name="com.dfgarcia.experiencego.EmpresaSponsorFragment"
+        android:label="fragment_empresa_sponsor"
+        tools:layout="@layout/fragment_empresa_sponsor" />
 </navigation>

@@ -3,12 +3,14 @@ package com.dfgarcia.experiencego.Fragmentos;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.dfgarcia.experiencego.R;
+import com.dfgarcia.experiencego.databinding.FragmentRegistrateBinding;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,6 +19,7 @@ import com.dfgarcia.experiencego.R;
  */
 public class RegistrateFragment extends Fragment {
 
+    private FragmentRegistrateBinding binding;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -61,6 +64,16 @@ public class RegistrateFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_registrate, container, false);
+        binding = FragmentRegistrateBinding.inflate(inflater,container,false);
+
+        binding.buttonRegistrate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_loginFragment2);
+                
+            }
+        });
+
+        return binding.getRoot();
     }
 }

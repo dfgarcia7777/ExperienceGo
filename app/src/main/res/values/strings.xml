@@ -18,9 +18,8 @@
     <string name="textView_email_registrar">E-MAIL</string>
     <string name="textView_contrasena">CONTRASEÑA</string>
     <string name="textView_repite_su_contrasena">REPITE SU CONTRASEÑA</string>
-    <string name="button_registratre">Registrate</string>
+    <string name="button_registrate">Registrate</string>
     <string name="textView_ya_tienes_cuenta_iniciar_sesion">Ya tienes cuenta. Iniciar Sesión</string>
-
 
 
     <!-- TODO: Remove or change this placeholder text -->

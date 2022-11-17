@@ -10,10 +10,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.dfgarcia.experiencego.R;
 import com.dfgarcia.experiencego.databinding.FragmentMainBinding;
@@ -86,24 +88,21 @@ public class MainFragment extends Fragment {
         binding.btnIniciarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.setReorderingAllowed(true);
-
-               transaction.replace(R.id.nav_host_fragment_content_main,LoginFragment.class,null);
-                transaction.commit();
+                //usando el navigation y la accion me desplza a la ventana que necesito
+                Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_loginFragment2);
             }
         });
         binding.btnRegistrate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.setReorderingAllowed(true);
+                Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_registrateFragment);
 
-                transaction.replace(R.id.nav_host_fragment_content_main,RegistrateFragment.class,null);
-                transaction.commit();
-
+            }
+        });
+        binding.btnEmpresaSponsor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_empresaSponsorFragment);
             }
         });
         return binding.getRoot();    }

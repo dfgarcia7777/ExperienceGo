@@ -251,7 +251,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnIrRegistrate"
+        android:id="@+id/button_registrate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editTextRepiteContraseña"
@@ -263,6 +263,6 @@
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
         android:backgroundTint="@color/gray"
-        android:text="@string/button_registratre" />
+        android:text="@string/button_registrate" />
 
 </RelativeLayout>
