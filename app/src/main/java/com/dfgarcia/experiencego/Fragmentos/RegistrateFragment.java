@@ -70,7 +70,6 @@ public class RegistrateFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_loginFragment2);
-                
             }
         });
 
