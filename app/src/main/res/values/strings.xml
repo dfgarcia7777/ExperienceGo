@@ -20,6 +20,9 @@
     <string name="textView_repite_su_contrasena">REPITE SU CONTRASEÑA</string>
     <string name="button_registrate">Registrate</string>
     <string name="textView_ya_tienes_cuenta_iniciar_sesion">Ya tienes cuenta. Iniciar Sesión</string>
+    //Empresa/Sponsor Fragment
+    <string name="button_creador_eventos">CREADOR DE EVENTOS</string>
+    <string name="button_sponsor">SPONSOR</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

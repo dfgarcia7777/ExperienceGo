@@ -40,7 +40,17 @@
     </fragment>
     <fragment
         android:id="@+id/empresaSponsorFragment"
-        android:name="com.dfgarcia.experiencego.EmpresaSponsorFragment"
+        android:name="com.dfgarcia.experiencego.Fragmentos.EmpresaSponsorFragment"
         android:label="fragment_empresa_sponsor"
         tools:layout="@layout/fragment_empresa_sponsor" />
+    <fragment
+        android:id="@+id/crearEventosFragment"
+        android:name="com.dfgarcia.experiencego.CrearEventosFragment"
+        android:label="fragment_crear_eventos"
+        tools:layout="@layout/fragment_crear_eventos" />
+    <fragment
+        android:id="@+id/sponsorFragment"
+        android:name="com.dfgarcia.experiencego.SponsorFragment"
+        android:label="fragment_sponsor"
+        tools:layout="@layout/fragment_sponsor" />
 </navigation>
