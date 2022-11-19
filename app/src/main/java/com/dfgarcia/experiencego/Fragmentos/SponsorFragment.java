@@ -1,4 +1,4 @@
-package com.dfgarcia.experiencego;
+package com.dfgarcia.experiencego.Fragmentos;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.dfgarcia.experiencego.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link CrearEventosFragment#newInstance} factory method to
+ * Use the {@link SponsorFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CrearEventosFragment extends Fragment {
+public class SponsorFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class CrearEventosFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public CrearEventosFragment() {
+    public SponsorFragment() {
         // Required empty public constructor
     }
 
@@ -34,11 +36,11 @@ public class CrearEventosFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment CrearEventosFragment.
+     * @return A new instance of fragment SponsorFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static CrearEventosFragment newInstance(String param1, String param2) {
-        CrearEventosFragment fragment = new CrearEventosFragment();
+    public static SponsorFragment newInstance(String param1, String param2) {
+        SponsorFragment fragment = new SponsorFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +61,6 @@ public class CrearEventosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_crear_eventos, container, false);
+        return inflater.inflate(R.layout.fragment_sponsor, container, false);
     }
 }

@@ -24,6 +24,9 @@
     <string name="button_creador_eventos">CREADOR DE EVENTOS</string>
     <string name="button_sponsor">SPONSOR</string>
 
+    //Crear Eventos Fragment
+
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -42,15 +42,22 @@
         android:id="@+id/empresaSponsorFragment"
         android:name="com.dfgarcia.experiencego.Fragmentos.EmpresaSponsorFragment"
         android:label="fragment_empresa_sponsor"
-        tools:layout="@layout/fragment_empresa_sponsor" />
+        tools:layout="@layout/fragment_empresa_sponsor" >
+        <action
+            android:id="@+id/action_empresaSponsorFragment_to_crearEventosFragment"
+            app:destination="@id/crearEventosFragment" />
+        <action
+            android:id="@+id/action_empresaSponsorFragment_to_sponsorFragment"
+            app:destination="@id/sponsorFragment" />
+    </fragment>
     <fragment
         android:id="@+id/crearEventosFragment"
-        android:name="com.dfgarcia.experiencego.CrearEventosFragment"
+        android:name="com.dfgarcia.experiencego.Fragmentos.CrearEventosFragment"
         android:label="fragment_crear_eventos"
         tools:layout="@layout/fragment_crear_eventos" />
     <fragment
         android:id="@+id/sponsorFragment"
-        android:name="com.dfgarcia.experiencego.SponsorFragment"
+        android:name="com.dfgarcia.experiencego.Fragmentos.SponsorFragment"
         android:label="fragment_sponsor"
         tools:layout="@layout/fragment_sponsor" />
 </navigation>

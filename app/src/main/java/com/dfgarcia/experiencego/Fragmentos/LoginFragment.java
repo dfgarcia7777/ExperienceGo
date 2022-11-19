@@ -84,4 +84,7 @@ public class LoginFragment extends Fragment {
 
         return binding.getRoot();
     }
+    private void validarUsuario(String URL){
+        StringRequest stringRequest = new StringRequest (Request.Method.POST)
+    }
 }

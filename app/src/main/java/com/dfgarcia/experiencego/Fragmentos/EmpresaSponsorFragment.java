@@ -69,7 +69,13 @@ public class EmpresaSponsorFragment extends Fragment {
         binding.buttonCreadorEventos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.);
+                Navigation.findNavController(view).navigate(R.id.action_empresaSponsorFragment_to_crearEventosFragment);
+            }
+        });
+        binding.buttonSponsor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_empresaSponsorFragment_to_sponsorFragment);
             }
         });
 
