@@ -9,6 +9,7 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -30,6 +31,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Hashtable;
@@ -44,6 +46,7 @@ public class LoginFragment extends Fragment {
 
 
     private FragmentLoginBinding binding;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -94,7 +97,11 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                  validarUsuario();
+                try {
+                    validarUsuario();
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -109,24 +116,25 @@ public class LoginFragment extends Fragment {
         return binding.getRoot();
     }
 
-public void validarUsuario(){
-//    RequestQueue requestQueue;
-//
-//    // Instantiate the cache
-//    Cache cache = new DiskBasedCache(getActivity().getCacheDir(), 1024 * 1024); // 1MB cap
-//
-//    // Set up the network to use HttpURLConnection as the HTTP client.
-//    Network network = new BasicNetwork(new HurlStack());
-//
-//    // Instantiate the RequestQueue with the cache and network.
-//    requestQueue = new RequestQueue(cache, network);
-//
-//    // Start the queue
-//    requestQueue.start();
+public void validarUsuario() throws MalformedURLException {
+    RequestQueue requestQueue;
+
+    // Instantiate the cache
+    Cache cache = new DiskBasedCache(getActivity().getCacheDir(), 1024 * 1024); // 1MB cap
+
+    // Set up the network to use HttpURLConnection as the HTTP client.
+    Network network = new BasicNetwork(new HurlStack());
+
+    // Instantiate the RequestQueue with the cache and network.
+    requestQueue = new RequestQueue(cache, network);
+
+    // Start the queue
+    requestQueue.start();
     System.out.println("entra");
     // Instantiate the RequestQueue.
     RequestQueue queue = Volley.newRequestQueue(getContext());
     String url ="http://192.168.1.138/snntech/validar_usuario.php";
+    URL direccionUrl = new URL(url);
 
     // Request a string response from the provided URL.
     StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
@@ -134,9 +142,12 @@ public void validarUsuario(){
                 @Override
                 public void onResponse(String response) {
                     System.out.println("entra2222");
+                    System.out.println(response);
                     if(!response.isEmpty()){
                         // Navigation.findNavController(view).navigate(R.id.action_loginFragment2_to_registrateFragment);
                         System.out.println("navegate");
+                        System.out.println(response);
+
                     }else{
                         //Toast.makeText(ge)
                         System.out.println("error");
@@ -146,13 +157,17 @@ public void validarUsuario(){
         @Override
         public void onErrorResponse(VolleyError error) {
             System.out.println("error3333");
+           // Toast.makeText(getParentFragment(), Toast.LENGTH_LONG).show();
         }
     }){
         @Override
         protected Map <String,String> getParams() throws AuthFailureError{
             System.out.println("parametros");
             Map<String,String> parametros = new HashMap<String, String>();
-            parametros.put("usuario",binding.tiEmail.toString());
+            parametros.put("email",binding.etEmail.getText().toString());
+            parametros.put("password",binding.etPassword.getText().toString());
+            //parametros.put("email","dani@gmail.com");
+            //parametros.put("email","kjk");
             return parametros;
 
         }
@@ -163,40 +178,36 @@ public void validarUsuario(){
 
 
 }
-
-        public void prueba(){
-                System.out.println("entra");
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://www.google.com",
-                    new Response.Listener<String>() {
-
-                        @Override
-                        public void onResponse(String response) {
-                            System.out.println("entra2");
-                            if(!response.isEmpty()){
-
-                               // Navigation.findNavController(view).navigate(R.id.action_loginFragment2_to_registrateFragment);
-                                System.out.println("entra2");
-                            }else{
-                                //Toast.makeText(ge)
-                                System.out.println("error");
-                            }
-                        }
-                    }, new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                            //Toast.makeText()
-                            System.out.println("error4");
-                        }
-                    }){
-                        @Override
-                        protected Map <String,String> getParams() throws AuthFailureError{
-                           Map<String,String> parametros = new HashMap<String, String>();
-                           parametros.put("usuario",binding.tiEmail.toString());
-                            System.out.println("parametros");
-                            return super.getParams();
-
-                        }
-                    };
-        }
+//    public void RealizarPost() {
+//
+//        String url = "https://www.jesusninoc.com/wp-json-form-7/v1/contact-forms/204/feedback";
+//        TextView ty;
+//
+//        StringRequest postRequest = new StringRequest(Request.Method.POST, url,
+//                new Response.Listener() {
+//                    @Override
+//                    public void onResponse(String response) {
+//                        ((TextView)findViewById(R.id.TextResult)).setText(response);
+//                    }
+//                },
+//                new Response.ErrorListener() {
+//                    @Override
+//                    public void onErrorResponse(VolleyError error) {
+//                        error.printStackTrace();
+//                    }
+//                }
+//        ) {
+//            @Override
+//            protected Map<string, string=""> getParams()
+//            {
+//                Map<string, string="">  params = new HashMap<>();
+//                // the POST parameters:
+//                params.put("your-name", "Pepito Grillo");
+//                return params;
+//            }
+//        };
+//        Volley.newRequestQueue(this).add(postRequest);
+//    }
+//}</string,></string,>
 
 }

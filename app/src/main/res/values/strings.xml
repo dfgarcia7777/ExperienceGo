@@ -14,12 +14,18 @@
     <string name="btn_ir_registrate">Regístrate</string>
     //Registrate Fragment
     <string name="textView_Registrate">Regístrate</string>
-    <string name="textView_nombre_de_usuario">NOMBRE DE USUARIO</string>
-    <string name="textView_email_registrar">E-MAIL</string>
+    <string name="textView_nombre_de_usuario">NOMBRE</string>
+    <string name="textView_primer_apellido_de_usuario">1º-APELLIDO</string>
+    <string name="textView_segundo_apeliido_de_usuario">2º-APELLIDO</string>
+    <string name="textView_email_registrar">1º-E-MAIL</string>
+    <string name="textView_otro_email_registrar">2º-E-MAIL</string>
     <string name="textView_contrasena">CONTRASEÑA</string>
     <string name="textView_repite_su_contrasena">REPITE SU CONTRASEÑA</string>
+    <string name="textView_telefono_del_usuario">TELEFONO</string>
+    <string name="textView_dni_nie_del_usuario">DNI/NIE</string>
     <string name="button_registrate">Registrate</string>
     <string name="textView_ya_tienes_cuenta_iniciar_sesion">Ya tienes cuenta. Iniciar Sesión</string>
+    <string name="action_settings">Settings</string>
     //Empresa/Sponsor Fragment
     <string name="button_creador_eventos">CREADOR DE EVENTOS</string>
     <string name="button_sponsor">SPONSOR</string>

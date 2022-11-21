@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#87F803"
+    android:background="@color/colorEmpresa"
     android:paddingLeft="20dp"
     android:paddingTop="20dp"
     android:paddingRight="20dp"
@@ -24,7 +24,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_6" />
+        app:srcCompat="@drawable/logo_exper__1_" />
 
     <Button
         android:id="@+id/btn_iniciar_sesion"
@@ -73,7 +73,6 @@
         android:layout_below="@+id/btn_registrate"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_margin="0dp"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="0dp"
@@ -82,6 +81,7 @@
         android:layout_marginBottom="0dp"
         android:backgroundTint="@color/gray"
         android:text="@string/btn_empresa_sponsor"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_registrate" />
