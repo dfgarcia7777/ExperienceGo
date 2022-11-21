@@ -6,7 +6,7 @@
     app:startDestination="@id/mainFragment">
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.dfgarcia.experiencego.Fragmentos.MainFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -21,7 +21,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment2"
-        android:name="com.dfgarcia.experiencego.Fragmentos.LoginFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
 
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/registrateFragment"
-        android:name="com.dfgarcia.experiencego.Fragmentos.RegistrateFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.RegistrateFragment"
         android:label="fragment_registrate"
         tools:layout="@layout/fragment_registrate" >
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/empresaSponsorFragment"
-        android:name="com.dfgarcia.experiencego.Fragmentos.EmpresaSponsorFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.EmpresaSponsorFragment"
         android:label="fragment_empresa_sponsor"
         tools:layout="@layout/fragment_empresa_sponsor" >
         <action
@@ -52,12 +52,12 @@
     </fragment>
     <fragment
         android:id="@+id/crearEventosFragment"
-        android:name="com.dfgarcia.experiencego.Fragmentos.CrearEventosFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.CrearEventosFragment"
         android:label="fragment_crear_eventos"
         tools:layout="@layout/fragment_crear_eventos" />
     <fragment
         android:id="@+id/sponsorFragment"
-        android:name="com.dfgarcia.experiencego.Fragmentos.SponsorFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.SponsorFragment"
         android:label="fragment_sponsor"
         tools:layout="@layout/fragment_sponsor" />
 </navigation>

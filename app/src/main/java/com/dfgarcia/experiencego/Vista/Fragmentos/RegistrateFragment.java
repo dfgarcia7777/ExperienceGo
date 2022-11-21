@@ -1,4 +1,4 @@
-package com.dfgarcia.experiencego.Fragmentos;
+package com.dfgarcia.experiencego.Vista.Fragmentos;
 
 import android.os.Bundle;
 

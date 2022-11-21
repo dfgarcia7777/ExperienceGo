@@ -1,8 +1,5 @@
-package com.dfgarcia.experiencego.Fragmentos;
+package com.dfgarcia.experiencego.Vista.Fragmentos;
 
-import static androidx.navigation.ActivityKt.findNavController;
-
-import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,7 +12,6 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.dfgarcia.experiencego.R;
 import com.dfgarcia.experiencego.databinding.FragmentMainBinding;
