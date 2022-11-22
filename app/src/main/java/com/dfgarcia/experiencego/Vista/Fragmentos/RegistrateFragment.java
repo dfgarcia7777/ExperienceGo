@@ -1,5 +1,6 @@
 package com.dfgarcia.experiencego.Vista.Fragmentos;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.dfgarcia.experiencego.R;
+import com.dfgarcia.experiencego.Vista.webExperienceGo;
 import com.dfgarcia.experiencego.databinding.FragmentRegistrateBinding;
 
 /**
@@ -69,7 +71,12 @@ public class RegistrateFragment extends Fragment {
         binding.buttonRegistrate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Este fragmento va a esa clase
+//                Intent intent = new Intent(getContext(), webExperienceGo.class);
+//                startActivity(intent);
+                Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_webExperienceGo2);
                 Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_loginFragment2);
+
             }
         });
 

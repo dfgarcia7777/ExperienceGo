@@ -476,13 +476,42 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+        <LinearLayout
+            android:layout_below="@+id/editTextRepiteContraseña"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginRight="0dp">
+
+            <CheckBox
+                android:id="@+id/checkAceptar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:enabled="true"
+                android:text="@string/check_Aceptar" />
+
+            <TextView
+                android:id="@+id/textSuscripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/textView_suscripcion"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
         <AutoCompleteTextView
             android:id="@+id/auto_completado_categoria"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/editTextRepiteContraseña"
+            android:layout_below="@+id/textSuscripcion"
             android:drawableStart="@drawable/ic_baseline_featured_video_24"
-            android:inputType="none">
+            android:inputType="none"
+            android:visibility="gone">
 
         </AutoCompleteTextView>
 

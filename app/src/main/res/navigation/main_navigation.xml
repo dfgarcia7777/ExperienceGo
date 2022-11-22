@@ -40,6 +40,12 @@
         <action
             android:id="@+id/action_registrateFragment_to_loginFragment2"
             app:destination="@id/loginFragment2" />
+        <action
+            android:id="@+id/action_registrateFragment_to_webExperienceGo2"
+            app:destination="@id/webExperienceGo2" />
+        <action
+            android:id="@+id/action_registrateFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/empresaSponsorFragment"
@@ -53,6 +59,8 @@
             android:id="@+id/action_empresaSponsorFragment_to_sponsorFragment"
             app:destination="@id/sponsorFragment" />
     </fragment>
+
+
     <fragment
         android:id="@+id/crearEventosFragment"
         android:name="com.dfgarcia.experiencego.Vista.Fragmentos.CrearEventosFragment"
@@ -65,7 +73,11 @@
         tools:layout="@layout/fragment_sponsor" />
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.dfgarcia.experiencego.HomeFragment"
+        android:name="com.dfgarcia.experiencego.Vista.ui.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <activity
+        android:id="@+id/webExperienceGo2"
+        android:name="com.dfgarcia.experiencego.Vista.webExperienceGo"
+        android:label="webExperienceGo" />
 </navigation>
