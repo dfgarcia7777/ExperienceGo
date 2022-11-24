@@ -96,7 +96,6 @@ public class LoginFragment extends Fragment {
             public void onClick(View view) {
 
                 try {
-
                     validarUsuario();
                 } catch (MalformedURLException e) {
                     e.printStackTrace();
@@ -142,9 +141,8 @@ public class LoginFragment extends Fragment {
                         if (!response.isEmpty()) {
                             System.out.println("entra22");
                             Toast.makeText(getActivity(), "Login", Toast.LENGTH_LONG).show();
-                            // System.out.println("navegate");
-                            //System.out.println(response);
-
+                            System.out.println("navegate");
+                            System.out.println(response);
                             Intent intent = new Intent(getContext(), HomeActivity.class);
                             startActivity(intent);
 
