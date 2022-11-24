@@ -19,6 +19,7 @@ import com.dfgarcia.experiencego.databinding.FragmentEmpresaSponsorBinding;
  */
 public class EmpresaSponsorFragment extends Fragment {
 
+
     private FragmentEmpresaSponsorBinding binding;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

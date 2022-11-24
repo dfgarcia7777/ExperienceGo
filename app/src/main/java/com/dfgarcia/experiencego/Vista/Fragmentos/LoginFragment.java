@@ -97,9 +97,7 @@ public class LoginFragment extends Fragment {
 
                 try {
 
-                       //Navigation.findNavController(view).navigate(R.id.action_loginFragment2_to_homeFragment);
-                  validarUsuario();
-
+                    validarUsuario();
                 } catch (MalformedURLException e) {
                     e.printStackTrace();
                 }

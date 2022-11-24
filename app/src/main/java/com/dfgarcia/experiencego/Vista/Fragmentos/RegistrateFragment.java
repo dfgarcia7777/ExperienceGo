@@ -1,16 +1,21 @@
 package com.dfgarcia.experiencego.Vista.Fragmentos;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.dfgarcia.experiencego.R;
+import com.dfgarcia.experiencego.Vista.HomeActivity;
 import com.dfgarcia.experiencego.Vista.webExperienceGo;
 import com.dfgarcia.experiencego.databinding.FragmentRegistrateBinding;
 
@@ -68,18 +73,45 @@ public class RegistrateFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentRegistrateBinding.inflate(inflater,container,false);
 
+
+
+        return binding.getRoot();
+    }
+
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         binding.buttonRegistrate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 //Este fragmento va a esa clase
 //                Intent intent = new Intent(getContext(), webExperienceGo.class);
 //                startActivity(intent);
-                Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_webExperienceGo2);
-                Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_loginFragment2);
 
+                if (binding.checkAceptar.isChecked() == true) {
+                    Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_homeActivity);
+
+                    new Handler().post(new Runnable() {
+                        @Override
+                        public void run() {
+                            //activity
+                            Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_webExperienceGo2);
+                            //fragmet
+                            // Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_webExpericenGoFragment);
+                            //menuHome
+                            //  Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_homeActivity);
+                        }
+                    });
+
+                }else if(binding.checkAceptar.isChecked()==false){
+
+                // Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_homeActivity);
+                Intent intent = new Intent(getContext(), HomeActivity.class);
+                startActivity(intent);
+            }
             }
         });
-
-        return binding.getRoot();
     }
 }
