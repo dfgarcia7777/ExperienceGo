@@ -91,6 +91,7 @@ public class RegistrateFragment extends Fragment {
 //                startActivity(intent);
 
                 if (binding.checkAceptar.isChecked() == true) {
+                    //menuHome
                     Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_homeActivity);
 
                     new Handler().post(new Runnable() {
@@ -100,13 +101,9 @@ public class RegistrateFragment extends Fragment {
                             Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_webExperienceGo2);
                             //fragmet
                             // Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_webExpericenGoFragment);
-                            //menuHome
-                            //  Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_homeActivity);
                         }
                     });
-
                 }else if(binding.checkAceptar.isChecked()==false){
-
                 // Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_homeActivity);
                 Intent intent = new Intent(getContext(), HomeActivity.class);
                 startActivity(intent);
