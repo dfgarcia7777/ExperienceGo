@@ -1,6 +1,5 @@
 package com.dfgarcia.experiencego.Vista.Fragmentos;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -15,8 +14,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.dfgarcia.experiencego.R;
-import com.dfgarcia.experiencego.Vista.HomeActivity;
-import com.dfgarcia.experiencego.Vista.webExperienceGo;
 import com.dfgarcia.experiencego.databinding.FragmentRegistrateBinding;
 
 /**
@@ -87,26 +84,25 @@ public class RegistrateFragment extends Fragment {
             public void onClick(View view) {
 
                 //Este fragmento va a esa clase
-//                Intent intent = new Intent(getContext(), webExperienceGo.class);
+//                Intent intent = new Intent(getContext(), webExperienceGoActivity.class);
 //                startActivity(intent);
 
                 if (binding.checkAceptar.isChecked() == true) {
                     //menuHome
-                    Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_homeActivity);
+                   // Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_homeActivity);
 
                     new Handler().post(new Runnable() {
                         @Override
                         public void run() {
                             //activity
-                            Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_webExperienceGo2);
-                            //fragmet
-                            // Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_webExpericenGoFragment);
+                            Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_webExperienceGo);
+
                         }
                     });
                 }else if(binding.checkAceptar.isChecked()==false){
                 // Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_homeActivity);
-                Intent intent = new Intent(getContext(), HomeActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(getContext(), HomeActivity.class);
+//                startActivity(intent);
             }
             }
         });

@@ -11,8 +11,8 @@
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
-            android:id="@+id/action_mainFragment_to_loginFragment2"
-            app:destination="@id/loginFragment2" />
+            android:id="@+id/action_mainFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
         <action
             android:id="@+id/action_mainFragment_to_registrateFragment"
             app:destination="@id/registrateFragment" />
@@ -23,13 +23,13 @@
 
 
     <fragment
-        android:id="@+id/loginFragment2"
+        android:id="@+id/loginFragment"
         android:name="com.dfgarcia.experiencego.Vista.Fragmentos.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
 
         <action
-            android:id="@+id/action_loginFragment2_to_registrateFragment"
+            android:id="@+id/action_loginFragment_to_registrateFragment"
             app:destination="@id/registrateFragment" />
     </fragment>
 
@@ -41,13 +41,10 @@
         tools:layout="@layout/fragment_registrate" >
         <action
             android:id="@+id/action_registrateFragment_to_loginFragment2"
-            app:destination="@id/loginFragment2" />
+            app:destination="@id/loginFragment" />
         <action
-            android:id="@+id/action_registrateFragment_to_webExperienceGo2"
-            app:destination="@id/webExperienceGo2" />
-        <action
-            android:id="@+id/action_registrateFragment_to_homeActivity"
-            app:destination="@id/homeActivity" />
+            android:id="@+id/action_registrateFragment_to_webExperienceGo"
+            app:destination="@id/webExperienceGo" />
     </fragment>
 
 
@@ -63,11 +60,7 @@
 
 
     <activity
-        android:id="@+id/webExperienceGo2"
-        android:name="com.dfgarcia.experiencego.Vista.webExperienceGo"
+        android:id="@+id/webExperienceGo"
+        android:name="com.dfgarcia.experiencego.Vista.webExperienceGoActivity"
         android:label="webExperienceGo" />
-    <activity
-        android:id="@+id/homeActivity"
-        android:name="com.dfgarcia.experiencego.Vista.HomeActivity"
-        android:label="HomeActivity" />
 </navigation>

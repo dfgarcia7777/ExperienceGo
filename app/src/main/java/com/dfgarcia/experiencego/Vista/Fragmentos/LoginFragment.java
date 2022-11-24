@@ -3,14 +3,11 @@ package com.dfgarcia.experiencego.Vista.Fragmentos;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.SurfaceControl;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.Navigation;
 
 import com.android.volley.AuthFailureError;
@@ -26,8 +23,6 @@ import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.dfgarcia.experiencego.R;
-import com.dfgarcia.experiencego.Vista.HomeActivity;
-import com.dfgarcia.experiencego.Vista.MainActivity;
 import com.dfgarcia.experiencego.databinding.FragmentLoginBinding;
 
 import java.net.MalformedURLException;
@@ -107,7 +102,7 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Navigation.findNavController(view).navigate(R.id.action_loginFragment2_to_registrateFragment);
+                Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_registrateFragment);
             }
         });
 
@@ -143,8 +138,8 @@ public class LoginFragment extends Fragment {
                             Toast.makeText(getActivity(), "Login", Toast.LENGTH_LONG).show();
                             System.out.println("navegate");
                             System.out.println(response);
-                            Intent intent = new Intent(getContext(), HomeActivity.class);
-                            startActivity(intent);
+//                            Intent intent = new Intent(getContext(), HomeActivity.class);
+//                            startActivity(intent);
 
                         } else {
                             System.out.println("error");

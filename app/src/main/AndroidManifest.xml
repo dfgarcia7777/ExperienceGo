@@ -32,15 +32,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Vista.HomeActivity"
-            android:exported="false"
-            android:label="@string/title_activity_home">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Vista.webExperienceGo"
+            android:name=".Vista.webExperienceGoActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

@@ -85,7 +85,7 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 //usando el navigation y la accion me desplza a la ventana que necesito
-                Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_loginFragment2);
+                Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_loginFragment);
             }
         });
         binding.btnRegistrate.setOnClickListener(new View.OnClickListener() {
