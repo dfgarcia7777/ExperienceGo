@@ -22,6 +22,7 @@ import com.android.volley.toolbox.DiskBasedCache;
 import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.dfgarcia.experiencego.MenuActivity;
 import com.dfgarcia.experiencego.R;
 import com.dfgarcia.experiencego.databinding.FragmentLoginBinding;
 
@@ -138,8 +139,8 @@ public class LoginFragment extends Fragment {
                             Toast.makeText(getActivity(), "Login", Toast.LENGTH_LONG).show();
                             System.out.println("navegate");
                             System.out.println(response);
-//                            Intent intent = new Intent(getContext(), HomeActivity.class);
-//                            startActivity(intent);
+                            Intent intent = new Intent(getContext(), MenuActivity.class);
+                            startActivity(intent);
 
                         } else {
                             System.out.println("error");

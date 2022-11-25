@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_loginFragment_to_registrateFragment"
             app:destination="@id/registrateFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_menuActivity"
+            app:destination="@id/menuActivity" />
     </fragment>
 
 
@@ -63,4 +66,9 @@
         android:id="@+id/webExperienceGo"
         android:name="com.dfgarcia.experiencego.Vista.webExperienceGoActivity"
         android:label="webExperienceGo" />
+    <activity
+        android:id="@+id/menuActivity"
+        android:name="com.dfgarcia.experiencego.MenuActivity"
+        android:label="activity_menu"
+        tools:layout="@layout/activity_menu" />
 </navigation>
