@@ -8,7 +8,7 @@
     android:paddingLeft="20dp"
     android:paddingTop="20dp"
     android:paddingRight="20dp"
-    tools:context=".Vista.Fragmentos.MainFragment">
+    tools:context=".Vista.Fragmentos.Main.MainFragment">
 
     <ImageView
         android:id="@+id/imageTravorium"

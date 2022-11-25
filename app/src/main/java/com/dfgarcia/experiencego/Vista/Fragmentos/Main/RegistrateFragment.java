@@ -1,6 +1,5 @@
-package com.dfgarcia.experiencego.Vista.Fragmentos;
+package com.dfgarcia.experiencego.Vista.Fragmentos.Main;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -83,13 +82,10 @@ public class RegistrateFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                //Este fragmento va a esa clase
-//                Intent intent = new Intent(getContext(), webExperienceGoActivity.class);
-//                startActivity(intent);
 
                 if (binding.checkAceptar.isChecked() == true) {
                     //menuHome
-                   // Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_homeActivity);
+                    Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_menuActivity);
 
                     new Handler().post(new Runnable() {
                         @Override
@@ -100,8 +96,9 @@ public class RegistrateFragment extends Fragment {
                         }
                     });
                 }else if(binding.checkAceptar.isChecked()==false){
-                // Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_homeActivity);
-//                Intent intent = new Intent(getContext(), HomeActivity.class);
+                Navigation.findNavController(view).navigate(R.id.action_registrateFragment_to_menuActivity);
+                    //Este fragmento va a esa clase
+//                Intent intent = new Intent(getContext(), MenuActivity.class);
 //                startActivity(intent);
             }
             }

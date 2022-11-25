@@ -1,15 +1,13 @@
-package com.dfgarcia.experiencego.Vista.Fragmentos;
+package com.dfgarcia.experiencego.Vista.Fragmentos.Main;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.dfgarcia.experiencego.R;
 import com.dfgarcia.experiencego.databinding.FragmentEmpresaSponsorBinding;
 
 /**
