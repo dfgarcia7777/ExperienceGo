@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.dfgarcia.experiencego.R;
 
-public class webExperienceGoActivity extends AppCompatActivity {
+public class WebExperienceGoActivity extends AppCompatActivity {
 
     private WebView myWebView ;
     private WebSettings myWebSettings;

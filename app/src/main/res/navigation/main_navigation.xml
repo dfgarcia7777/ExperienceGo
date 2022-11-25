@@ -55,7 +55,7 @@
 
     <activity
         android:id="@+id/menuActivity"
-        android:name="com.dfgarcia.experiencego.MenuActivity"
+        android:name="com.dfgarcia.experiencego.Vista.MenuActivity"
         android:label="activity_menu"
         tools:layout="@layout/activity_menu" />
 
@@ -70,7 +70,7 @@
 
     <activity
         android:id="@+id/webExperienceGo"
-        android:name="com.dfgarcia.experiencego.Vista.webExperienceGoActivity"
+        android:name="com.dfgarcia.experiencego.Vista.WebExperienceGoActivity"
         android:label="webExperienceGo" />
 
 </navigation>
