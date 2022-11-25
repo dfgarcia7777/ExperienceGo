@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.dfgarcia.experiencego.R;
 import com.dfgarcia.experiencego.Vista.Fragmentos.Menu.EventosFragment;
@@ -27,6 +28,13 @@ public class MenuActivity extends AppCompatActivity {
 
         binding.bottomNavigationView.setBackground(null);
 
+        binding.fabMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //falta crear el fragmento
+                replaceFragment(new HomeFragment());
+            }
+        });
         //indicas el fragmento con el que abres
         replaceFragment(new HomeFragment());
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
@@ -59,4 +67,5 @@ public class MenuActivity extends AppCompatActivity {
         fragmentTransaction.commit();
 
     }
+
 }
