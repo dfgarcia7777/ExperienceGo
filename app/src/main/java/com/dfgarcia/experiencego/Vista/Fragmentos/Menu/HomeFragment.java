@@ -2,21 +2,31 @@ package com.dfgarcia.experiencego.Vista.Fragmentos.Menu;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.dfgarcia.experiencego.Controladores.AdapterHome;
+import com.dfgarcia.experiencego.Model.Eventos;
 import com.dfgarcia.experiencego.R;
+import com.dfgarcia.experiencego.databinding.FragmentHomeBinding;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link HomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class HomeFragment extends Fragment {
 
+    private FragmentHomeBinding binding;
+    private AdapterHome adapterHome;
+    private RecyclerView recyclerViewHome;
+    private List<Eventos> listaEventos;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -30,14 +40,6 @@ public class HomeFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
-     */
     // TODO: Rename and change types and number of parameters
     public static HomeFragment newInstance(String param1, String param2) {
         HomeFragment fragment = new HomeFragment();
@@ -61,6 +63,81 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        //binding = FragmentHomeBinding.inflate(inflater,container,false);
+        View vista  = inflater.inflate(R.layout.fragment_home,container,false);
+
+        //PRIMER RECICLERvIEW
+        listaEventos = new ArrayList<>();
+       // recyclerViewHome = binding.reciclerViewPrueba.findViewById(R.id.reciclerViewPrueba);
+        recyclerViewHome = (RecyclerView) vista.findViewById(R.id.reciclerViewEventos);
+        recyclerViewHome.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+        listaEventos = new ArrayList<>();
+        adapterHome = new AdapterHome(leerCategorias());
+        recyclerViewHome.setAdapter(adapterHome);
+
+        //Segundo ReciclerView
+        recyclerViewHome = (RecyclerView) vista.findViewById(R.id.recyclerViewPrivilegios);
+        recyclerViewHome.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+        listaEventos = new ArrayList<>();
+        adapterHome = new AdapterHome(leerCategorias());
+        recyclerViewHome.setAdapter(adapterHome);
+       // return binding.getRoot();
+        return vista;
+    }
+
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+//        init();
+//        initRecycler();
+
+    }
+    private void init(){
+     //   recyclerViewHome = binding.reciclerViewPrueba;
+    }
+    private void initRecycler(){
+        //vertical
+        //recyclerViewHome.setLayoutManager(new LinearLayoutManager(getContext()));
+        //Horizontal
+        recyclerViewHome.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+        releadRecycler();
+    }
+    private void releadRecycler(){
+        AdapterHome adapterCategorias = new AdapterHome(leerCategorias());
+        recyclerViewHome.setAdapter(adapterCategorias);
+    }
+    private ArrayList<Eventos> leerCategorias(){
+
+        ArrayList<Eventos> listaEventos = new ArrayList<>();
+
+        listaEventos.add(new Eventos(R.drawable.ic_baseline_home_24));
+        listaEventos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
+        listaEventos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
+        listaEventos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
+        listaEventos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
+        listaEventos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
+        listaEventos.add(new Eventos(R.drawable.ic_baseline_newspaper_24));
+        listaEventos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
+        System.out.println(listaEventos);
+        return listaEventos;
+    }
+    private void RecyclerViewCategoriaList(){
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false);
+
+        binding.reciclerViewEventos.setLayoutManager(linearLayoutManager);
+
+        ArrayList<Eventos> listaProductos = new ArrayList<>();
+
+        listaProductos.add(new Eventos(R.drawable.ic_baseline_home_24));
+        listaProductos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
+        listaProductos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
+        listaProductos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
+        listaProductos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
+        listaProductos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
+        listaProductos.add(new Eventos(R.drawable.ic_baseline_newspaper_24));
+        listaProductos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
+
     }
 }
