@@ -63,38 +63,45 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        //binding = FragmentHomeBinding.inflate(inflater,container,false);
-        View vista  = inflater.inflate(R.layout.fragment_home,container,false);
+        binding = FragmentHomeBinding.inflate(inflater,container,false);
+        //View vista  = inflater.inflate(R.layout.fragment_home,container,false);
 
         //PRIMER RECICLERvIEW
-        listaEventos = new ArrayList<>();
-       // recyclerViewHome = binding.reciclerViewPrueba.findViewById(R.id.reciclerViewPrueba);
-        recyclerViewHome = (RecyclerView) vista.findViewById(R.id.reciclerViewEventos);
-        recyclerViewHome.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
-        listaEventos = new ArrayList<>();
-        adapterHome = new AdapterHome(leerCategorias());
-        recyclerViewHome.setAdapter(adapterHome);
+//        listaEventos = new ArrayList<>();
+//        recyclerViewHome = binding.reciclerViewEventos;
+       // recyclerViewHome = (RecyclerView) vista.findViewById(R.id.reciclerViewEventos);
+//        recyclerViewHome.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+//        listaEventos = new ArrayList<>();
+//        adapterHome = new AdapterHome(leerCategorias());
+//        recyclerViewHome.setAdapter(adapterHome);
 
-        //Segundo ReciclerView
-        recyclerViewHome = (RecyclerView) vista.findViewById(R.id.recyclerViewPrivilegios);
-        recyclerViewHome.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
-        listaEventos = new ArrayList<>();
-        adapterHome = new AdapterHome(leerCategorias());
-        recyclerViewHome.setAdapter(adapterHome);
-       // return binding.getRoot();
-        return vista;
+       return binding.getRoot();
+        //return vista;
     }
 
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-//        init();
-//        initRecycler();
-
+        //primer ReciclerView
+        initEventos();
+        initRecycler();
+        //Segundo ReciclerView
+        initPrivilegios();
+        initRecycler();
+        //tercero ReciclerView
+        initArticulos();
+        initRecycler();
     }
-    private void init(){
-     //   recyclerViewHome = binding.reciclerViewPrueba;
+    private void initEventos(){
+        recyclerViewHome = binding.recyclerViewPrivilegios;
+    }
+
+    private void initPrivilegios(){
+        recyclerViewHome = binding.recyclerViewEventos;
+    }
+    private void initArticulos(){
+        recyclerViewHome = binding.recyclerViewArticulos;
     }
     private void initRecycler(){
         //vertical
@@ -122,22 +129,5 @@ public class HomeFragment extends Fragment {
         System.out.println(listaEventos);
         return listaEventos;
     }
-    private void RecyclerViewCategoriaList(){
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false);
-
-        binding.reciclerViewEventos.setLayoutManager(linearLayoutManager);
-
-        ArrayList<Eventos> listaProductos = new ArrayList<>();
-
-        listaProductos.add(new Eventos(R.drawable.ic_baseline_home_24));
-        listaProductos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
-        listaProductos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
-        listaProductos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
-        listaProductos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
-        listaProductos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
-        listaProductos.add(new Eventos(R.drawable.ic_baseline_newspaper_24));
-        listaProductos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
-
-    }
 }

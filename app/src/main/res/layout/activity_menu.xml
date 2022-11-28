@@ -22,6 +22,12 @@
 
             </TextView>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
@@ -33,18 +39,18 @@
         android:id="@+id/bottomAppBar"
         app:fabCradleMargin="10dp"
         app:fabCradleRoundedCornerRadius="10dp"
-        app:fabCradleVerticalOffset="10dp"
-        >
+        app:fabCradleVerticalOffset="10dp">
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/bottomNavigationView"
             android:layout_marginRight="16dp"
             app:menu="@menu/bottom_nav_menu"
-            android:background="@drawable/transparente_backgroud"
+            android:background="@drawable/transparente_backgroud"/>
 
-            />
     </com.google.android.material.bottomappbar.BottomAppBar>
+
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabMenu"
