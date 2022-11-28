@@ -1,20 +1,21 @@
 package com.dfgarcia.experiencego.Vista;
 
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.os.Bundle;
-import android.view.View;
-
 import com.dfgarcia.experiencego.R;
 import com.dfgarcia.experiencego.Vista.Fragmentos.Menu.EventosFragment;
+import com.dfgarcia.experiencego.Vista.Fragmentos.Menu.ExperienciasFragment;
 import com.dfgarcia.experiencego.Vista.Fragmentos.Menu.HomeFragment;
 import com.dfgarcia.experiencego.Vista.Fragmentos.Menu.NoticiasFragment;
 import com.dfgarcia.experiencego.Vista.Fragmentos.Menu.PerfilFragment;
 import com.dfgarcia.experiencego.databinding.ActivityMenuBinding;
-import com.google.android.material.bottomappbar.BottomAppBar;
+
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -32,7 +33,7 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //falta crear el fragmento
-                replaceFragment(new HomeFragment());
+                replaceFragment(new ExperienciasFragment());
             }
         });
         //indicas el fragmento con el que abres
@@ -47,7 +48,9 @@ public class MenuActivity extends AppCompatActivity {
                 case R.id.navigation_eventos:
                     replaceFragment(new EventosFragment());
                     break;
+
                 case R.id.navigation_noticias:
+                    //habria que quitarlo
                     replaceFragment(new NoticiasFragment());
                     break;
                 case R.id.navigation_perfil:

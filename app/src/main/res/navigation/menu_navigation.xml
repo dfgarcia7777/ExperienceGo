@@ -29,4 +29,9 @@
         android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/experienciasFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.ExperienciasFragment"
+        android:label="fragment_experiencias"
+        tools:layout="@layout/fragment_experiencias" />
 </navigation>

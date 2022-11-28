@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,12 +20,14 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.ViewHolderHome
     public static class ViewHolderHome extends RecyclerView.ViewHolder{
 
         private ImageView imagen;
-
+        private TextView textViewImagen;
+        TextView textoImagen;
 
         public ViewHolderHome(@NonNull View itemView) {
             super(itemView);
             //declaro la imagen
             imagen = itemView.findViewById(R.id.mi_item);
+            textViewImagen = itemView.findViewById(R.id.TextViewImagen);
         }
     }
 
@@ -49,6 +52,8 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.ViewHolderHome
         //poisicon de la imagen
         // holder.imagen.setImageResource(listaCategorias.get(position).getImagen());
         holder.imagen.setImageResource(listaEventos.get(position).getImagen());
+        holder.textViewImagen.setText(listaEventos.get(position).getTextoImagen());
+
     }
 
     @Override

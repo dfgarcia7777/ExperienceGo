@@ -87,17 +87,17 @@ public class HomeFragment extends Fragment {
         initEventos();
         initRecycler();
         //Segundo ReciclerView
-        initPrivilegios();
+        initEnlaces();
         initRecycler();
         //tercero ReciclerView
         initArticulos();
         initRecycler();
     }
     private void initEventos(){
-        recyclerViewHome = binding.recyclerViewPrivilegios;
+        recyclerViewHome = binding.recyclerViewEnlaces;
     }
 
-    private void initPrivilegios(){
+    private void initEnlaces(){
         recyclerViewHome = binding.recyclerViewEventos;
     }
     private void initArticulos(){
@@ -118,14 +118,16 @@ public class HomeFragment extends Fragment {
 
         ArrayList<Eventos> listaEventos = new ArrayList<>();
 
-        listaEventos.add(new Eventos(R.drawable.ic_baseline_home_24));
-        listaEventos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
-        listaEventos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
-        listaEventos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
-        listaEventos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
-        listaEventos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
-        listaEventos.add(new Eventos(R.drawable.ic_baseline_newspaper_24));
-        listaEventos.add(new Eventos(R.drawable.ic_baseline_featured_video_24));
+        listaEventos.add(new Eventos(R.drawable._8octubre,"Promocion de tus productos"));
+        listaEventos.add(new Eventos(R.drawable._deagosto,"Desayuno circulo de mujeres"));
+        listaEventos.add(new Eventos(R.drawable._8octubre,"Promocion de tus productos"));
+        listaEventos.add(new Eventos(R.drawable._deagosto,"Desayuno circulo de mujeres"));
+        listaEventos.add(new Eventos(R.drawable._8octubre,"Promocion de tus productos"));
+        listaEventos.add(new Eventos(R.drawable._deagosto,"Desayuno circulo de mujeres"));
+        listaEventos.add(new Eventos(R.drawable._8octubre,"Promocion de tus productos"));
+        listaEventos.add(new Eventos(R.drawable._deagosto,"Desayuno circulo de mujeres"));
+        listaEventos.add(new Eventos(R.drawable._8octubre,"Promocion de tus productos"));
+        listaEventos.add(new Eventos(R.drawable._deagosto,"Desayuno circulo de mujeres"));
         System.out.println(listaEventos);
         return listaEventos;
     }
