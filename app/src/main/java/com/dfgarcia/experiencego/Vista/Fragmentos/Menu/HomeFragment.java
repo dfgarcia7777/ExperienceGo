@@ -5,28 +5,33 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.dfgarcia.experiencego.Controladores.AdapterHome;
+import com.dfgarcia.experiencego.Controladores.AdaptadorTab;
 import com.dfgarcia.experiencego.Model.Eventos;
 import com.dfgarcia.experiencego.R;
+import com.dfgarcia.experiencego.Controladores.AdapterTabEventos;
+import com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Tab.TabEventosFragment;
 import com.dfgarcia.experiencego.databinding.FragmentHomeBinding;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements TabLayoutMediator.TabConfigurationStrategy{
 
     private FragmentHomeBinding binding;
-    private AdapterHome adapterHome;
-    private RecyclerView recyclerViewHome;
+    private AdapterTabEventos adapterTabEventos;
+    private RecyclerView recyclerViewTabEventos;
     private List<Eventos> listaEventos;
+
+    private ArrayList<String> titles;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -75,6 +80,15 @@ public class HomeFragment extends Fragment {
 //        adapterHome = new AdapterHome(leerCategorias());
 //        recyclerViewHome.setAdapter(adapterHome);
 
+        titles = new ArrayList<>();
+        titles.add(getString(R.string.tab_eventos));
+        titles.add(getString(R.string.tab_enlaces));
+        titles.add(getString(R.string.tab_grupos));
+        titles.add(getString(R.string.tab_articulos));
+
+        setViewPagerAdapter();
+        new TabLayoutMediator(binding.tabLayout, binding.viewPager2, this).attach();
+
        return binding.getRoot();
         //return vista;
     }
@@ -83,37 +97,37 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        //primer ReciclerView
-        initEventos();
-        initRecycler();
-        //Segundo ReciclerView
-        initEnlaces();
-        initRecycler();
-        //tercero ReciclerView
-        initArticulos();
-        initRecycler();
+//        //primer ReciclerView
+//        initEventos();
+//        initRecycler();
+//        //Segundo ReciclerView
+//        initEnlaces();
+//        initRecycler();
+//        //tercero ReciclerView
+//        initArticulos();
+//        initRecycler();
     }
-    private void initEventos(){
-        recyclerViewHome = binding.recyclerViewEnlaces;
-    }
-
-    private void initEnlaces(){
-        recyclerViewHome = binding.recyclerViewEventos;
-    }
-    private void initArticulos(){
-        recyclerViewHome = binding.recyclerViewArticulos;
-    }
-    private void initRecycler(){
-        //vertical
-        //recyclerViewHome.setLayoutManager(new LinearLayoutManager(getContext()));
-        //Horizontal
-        recyclerViewHome.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
-        releadRecycler();
-    }
-    private void releadRecycler(){
-        AdapterHome adapterCategorias = new AdapterHome(leerCategorias());
-        recyclerViewHome.setAdapter(adapterCategorias);
-    }
+//    private void initEventos(){
+//        recyclerViewHome = binding.recyclerViewEnlaces;
+//    }
+//
+//    private void initEnlaces(){
+//        recyclerViewHome = binding.recyclerViewEventos;
+//    }
+//    private void initArticulos(){
+//        recyclerViewHome = binding.recyclerViewArticulos;
+//    }
+//    private void initRecycler(){
+//        //vertical
+//        //recyclerViewHome.setLayoutManager(new LinearLayoutManager(getContext()));
+//        //Horizontal
+//        recyclerViewHome.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+//        releadRecycler();
+//    }
+//    private void releadRecycler(){
+//        AdapterHome adapterCategorias = new AdapterHome(leerCategorias());
+//        recyclerViewHome.setAdapter(adapterCategorias);
+//    }
     private ArrayList<Eventos> leerCategorias(){
 
         ArrayList<Eventos> listaEventos = new ArrayList<>();
@@ -131,5 +145,25 @@ public class HomeFragment extends Fragment {
         System.out.println(listaEventos);
         return listaEventos;
     }
+    public void setViewPagerAdapter(){
 
+        AdaptadorTab adaptadorTab = new AdaptadorTab(requireActivity());// sustituyo this por getActivity()
+        ArrayList<Fragment> fragmentList = new ArrayList<>();
+        fragmentList.add(new TabEventosFragment());
+        fragmentList.add(new ExperienciasFragment());
+        fragmentList.add(new NoticiasFragment());
+        fragmentList.add(new PerfilFragment());
+        adaptadorTab.setData(fragmentList);
+        binding.viewPager2.setAdapter(adaptadorTab);
+    }
+    @Override
+    public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
+        tab.setText(titles.get(position));
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 }

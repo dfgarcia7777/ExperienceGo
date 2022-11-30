@@ -34,4 +34,9 @@
         android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.ExperienciasFragment"
         android:label="fragment_experiencias"
         tools:layout="@layout/fragment_experiencias" />
+    <fragment
+        android:id="@+id/tabEventosFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Tab.TabEventosFragment"
+        android:label="fragment_tab_eventos"
+        tools:layout="@layout/fragment_tab_eventos" />
 </navigation>
