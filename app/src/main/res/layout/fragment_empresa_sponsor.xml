@@ -9,7 +9,7 @@
     android:paddingTop="20dp"
     android:paddingRight="20dp"
     android:backgroundTint="@color/white"
-    tools:context=".Vista.Fragmentos.Main.MainFragment">
+    tools:context=".Vista.Fragmentos.Login.MainFragment">
 
     <ImageView
         android:id="@+id/imageVer"

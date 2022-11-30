@@ -39,4 +39,24 @@
         android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Tab.TabEventosFragment"
         android:label="fragment_tab_eventos"
         tools:layout="@layout/fragment_tab_eventos" />
+    <fragment
+        android:id="@+id/tabEnlacesFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Tab.TabEnlacesFragment"
+        android:label="fragment_tab_enlaces"
+        tools:layout="@layout/fragment_tab_enlaces" />
+    <fragment
+        android:id="@+id/tabGruposFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Tab.TabGruposFragment"
+        android:label="fragment_tab_grupos"
+        tools:layout="@layout/fragment_tab_grupos" />
+    <fragment
+        android:id="@+id/tabArticulosFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Tab.TabArticulosFragment"
+        android:label="fragment_tab_articulos"
+        tools:layout="@layout/fragment_tab_articulos" />
+    <fragment
+        android:id="@+id/tabContactosFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Tab.TabContactosFragment"
+        android:label="fragment_tab_contactos"
+        tools:layout="@layout/fragment_tab_contactos" />
 </navigation>
