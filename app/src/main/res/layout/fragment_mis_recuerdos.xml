@@ -3,12 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Vista.Fragmentos.Menu.Home.Tab.TabContactosFragment">
+    tools:context=".Vista.Fragmentos.Menu.Home.MisRecuerdosFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="CONTACTOS" />
+        android:text="@string/title_mis_recuerdos" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="198dp"
+        android:layout_height="304dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/title_mis_recuerdos" />
 
 </FrameLayout>

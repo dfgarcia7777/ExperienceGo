@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorEmpresa"
+    android:background="@color/white"
     android:paddingLeft="20dp"
     android:paddingTop="20dp"
     android:paddingRight="20dp"
@@ -541,7 +541,7 @@
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
         android:text="@string/textView_ya_tienes_cuenta_iniciar_sesion"
-        android:textColor="@color/yellow" />
+        android:textColor="@color/colorTextoEmpresa" />
 
     </LinearLayout>
     </ScrollView>

@@ -1,25 +1,25 @@
-package com.dfgarcia.experiencego.Vista.Fragmentos.Menu;
+package com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Home;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.dfgarcia.experiencego.Controladores.AdaptadorTab;
+import com.dfgarcia.experiencego.Controladores.AdapterTabEventos;
 import com.dfgarcia.experiencego.Model.Eventos;
 import com.dfgarcia.experiencego.R;
-import com.dfgarcia.experiencego.Controladores.AdapterTabEventos;
-import com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Tab.TabArticulosFragment;
-import com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Tab.TabContactosFragment;
-import com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Tab.TabEnlacesFragment;
-import com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Tab.TabEventosFragment;
-import com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Tab.TabGruposFragment;
+import com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Home.Tab.TabAgendaFragment;
+import com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Home.Tab.TabMisExperienciasFragment;
+import com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Home.Tab.TabNoticiasFragment;
+import com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Home.Tab.TabContactosFragment;
+import com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Home.Tab.TabEnlacesFragment;
+import com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Home.Tab.TabEventosFragment;
 import com.dfgarcia.experiencego.databinding.FragmentHomeBinding;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
@@ -86,10 +86,16 @@ public class HomeFragment extends Fragment implements TabLayoutMediator.TabConfi
 
         titles = new ArrayList<>();
         titles.add(getString(R.string.tab_eventos));
+        titles.add(getString(R.string.tab_mis_experiencia));
         titles.add(getString(R.string.tab_enlaces));
-        titles.add(getString(R.string.tab_grupos));
-        titles.add(getString(R.string.tab_articulos));
+        titles.add(getString(R.string.tab_noticias));
         titles.add(getString(R.string.tab_contactos));
+        titles.add(getString(R.string.tab_agenda));
+
+
+        //titles.add(getString(R.string.tab_grupos));
+        //titles.add(getString(R.string.tab_articulos));
+
         setViewPagerAdapter();
         new TabLayoutMediator(binding.tabLayout, binding.viewPager2, this).attach();
 
@@ -154,11 +160,16 @@ public class HomeFragment extends Fragment implements TabLayoutMediator.TabConfi
         AdaptadorTab adaptadorTab = new AdaptadorTab(requireActivity());// sustituyo this por getActivity()
         ArrayList<Fragment> fragmentList = new ArrayList<>();
         fragmentList.add(new TabEventosFragment());
+        fragmentList.add(new TabMisExperienciasFragment());
         fragmentList.add(new TabEnlacesFragment());
-        fragmentList.add(new TabGruposFragment());
-        fragmentList.add(new TabArticulosFragment());
+        fragmentList.add(new TabNoticiasFragment());
         fragmentList.add(new TabContactosFragment());
+        fragmentList.add(new TabAgendaFragment());
+        //fragmentList.add(new TabGruposFragment());
+        // fragmentList.add(new TabArticulosFragment());
         adaptadorTab.setData(fragmentList);
+
+
         binding.viewPager2.setAdapter(adaptadorTab);
     }
     @Override

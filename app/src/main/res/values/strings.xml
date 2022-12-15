@@ -37,6 +37,10 @@
 
     //---------------Menu-----------------------------
     //MenuActivity
+    //top
+    <string name="title_mis_recuerdos">Mis Recuerdos</string>
+
+    //bottom
     <string name="title_home">Home</string>
     <string name="title_eventos">Eventos</string>
     <string name="title_perfil">Perfil</string>
@@ -45,11 +49,15 @@
 
     //TabHome
     <string name="tab_eventos">Eventos</string>
+    <string name="tab_mis_experiencia">Mis Experiencias</string>
     <string name="tab_enlaces">Enlaces</string>
-    <string name="tab_grupos">Grupos</string>
-    <string name="tab_articulos">Articulos</string>
+    <string name="tab_noticias">Noticias</string>
     <string name="tab_contactos">Contactos</string>
+    <string name="tab_agenda">Agenda</string>
 
+    //tabHome Quitados
+    <string name="tab_articulos">Articulos</string>
+    <string name="tab_grupos">Grupos</string>
 
     //Fragmento Perfil
     <string name="btn_escaner_qr">ESCANER QR</string>

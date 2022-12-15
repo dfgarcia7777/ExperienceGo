@@ -1,4 +1,4 @@
-package com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Tab;
+package com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Home.Tab;
 
 import android.os.Bundle;
 
@@ -12,10 +12,10 @@ import com.dfgarcia.experiencego.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link TabEnlacesFragment#newInstance} factory method to
+ * Use the {@link TabContactosFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class TabEnlacesFragment extends Fragment {
+public class TabContactosFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class TabEnlacesFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public TabEnlacesFragment() {
+    public TabContactosFragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +36,11 @@ public class TabEnlacesFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment TabEnlacesFragment.
+     * @return A new instance of fragment TabContactosFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static TabEnlacesFragment newInstance(String param1, String param2) {
-        TabEnlacesFragment fragment = new TabEnlacesFragment();
+    public static TabContactosFragment newInstance(String param1, String param2) {
+        TabContactosFragment fragment = new TabContactosFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class TabEnlacesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tab_enlaces, container, false);
+        return inflater.inflate(R.layout.fragment_tab_contactos, container, false);
     }
 }

@@ -26,7 +26,7 @@
         tools:layout="@layout/fragment_noticias" />
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.HomeFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
@@ -36,27 +36,47 @@
         tools:layout="@layout/fragment_experiencias" />
     <fragment
         android:id="@+id/tabEventosFragment"
-        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Tab.TabEventosFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Home.Tab.TabEventosFragment"
         android:label="fragment_tab_eventos"
         tools:layout="@layout/fragment_tab_eventos" />
     <fragment
         android:id="@+id/tabEnlacesFragment"
-        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Tab.TabEnlacesFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Home.Tab.TabEnlacesFragment"
         android:label="fragment_tab_enlaces"
         tools:layout="@layout/fragment_tab_enlaces" />
     <fragment
         android:id="@+id/tabGruposFragment"
-        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Tab.TabGruposFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Home.Tab.TabGruposFragment"
         android:label="fragment_tab_grupos"
         tools:layout="@layout/fragment_tab_grupos" />
     <fragment
         android:id="@+id/tabArticulosFragment"
-        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Tab.TabArticulosFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Home.Tab.TabArticulosFragment"
         android:label="fragment_tab_articulos"
         tools:layout="@layout/fragment_tab_articulos" />
     <fragment
         android:id="@+id/tabContactosFragment"
-        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Tab.TabContactosFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Home.Tab.TabContactosFragment"
         android:label="fragment_tab_contactos"
         tools:layout="@layout/fragment_tab_contactos" />
+    <fragment
+        android:id="@+id/tabMisExperienciasFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Home.Tab.TabMisExperienciasFragment"
+        android:label="fragment_tab_mis_experiencias"
+        tools:layout="@layout/fragment_tab_mis_experiencias" />
+    <fragment
+        android:id="@+id/tabNoticiasFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Home.Tab.TabNoticiasFragment"
+        android:label="fragment_tab_noticias"
+        tools:layout="@layout/fragment_tab_noticias" />
+    <fragment
+        android:id="@+id/tabAgendaFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Home.Tab.TabAgendaFragment"
+        android:label="fragment_tab_agenda"
+        tools:layout="@layout/fragment_tab_agenda" />
+    <fragment
+        android:id="@+id/misRecuerdosFragment"
+        android:name="com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Home.MisRecuerdosFragment"
+        android:label="fragment_mis_recuerdos"
+        tools:layout="@layout/fragment_mis_recuerdos" />
 </navigation>

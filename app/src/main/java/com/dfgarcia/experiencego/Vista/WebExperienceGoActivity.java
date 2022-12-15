@@ -22,7 +22,7 @@ public class WebExperienceGoActivity extends AppCompatActivity {
         myWebSettings = myWebView.getSettings();
         myWebSettings.setJavaScriptEnabled(true);
         myWebSettings.setDomStorageEnabled(true);
-        myWebView.loadUrl("http://travorium.com/931511");
+        myWebView.loadUrl("https://travorium.com/931511");
         myWebView.setWebViewClient(new WebViewClient());
 
         //https://travorium.com/931511
