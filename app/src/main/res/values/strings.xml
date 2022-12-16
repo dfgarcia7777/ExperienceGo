@@ -63,7 +63,13 @@
     <string name="btn_escaner_qr">ESCANER QR</string>
     <string name="text_perfil_completo">¡Tu perfil casi esta completo!</string>
     <string name="text_perfil_nombre">Jose Luis Paricio</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_home">HomeActivity</string>
+
+    //Fragmento Mis Recuerdos
+    <string name="title_mis_eventos">Eventos</string>
+    <string name="title_mis_experiencias">Experiencias</string>
+    <string name="title_fecha_mis_experiencias">Fecha</string>
 
 </resources>

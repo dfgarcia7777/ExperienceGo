@@ -2,13 +2,27 @@ package com.dfgarcia.experiencego.Vista.Fragmentos.Menu.Home;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.dfgarcia.experiencego.Controladores.AdapterHome;
+import com.dfgarcia.experiencego.Controladores.AdapterRecyclerMisRecuerdos;
+import com.dfgarcia.experiencego.Controladores.AdapterTabEventos;
+import com.dfgarcia.experiencego.Model.Eventos;
+import com.dfgarcia.experiencego.Model.MisRecuerdos;
 import com.dfgarcia.experiencego.R;
+import com.dfgarcia.experiencego.databinding.FragmentMisRecuerdosBinding;
+
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,6 +31,10 @@ import com.dfgarcia.experiencego.R;
  */
 public class MisRecuerdosFragment extends Fragment {
 
+    FragmentMisRecuerdosBinding binding;
+    private AdapterRecyclerMisRecuerdos adapterMisRecuerdos;
+    private RecyclerView recyclerViewMisRercuerdo;
+    private List<MisRecuerdos> listaMisEventos;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -61,6 +79,44 @@ public class MisRecuerdosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mis_recuerdos, container, false);
+        binding = FragmentMisRecuerdosBinding.inflate(inflater,container,false);
+        return binding.getRoot();
+    }
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        //tercero ReciclerView
+        initMisRecuerdos();
+        initRecycler();
+    }
+    private void initMisRecuerdos(){
+        recyclerViewMisRercuerdo = binding.recyclerViewMisExperiencias;
+    }
+    private void initRecycler(){
+        //vertical
+        recyclerViewMisRercuerdo.setLayoutManager(new LinearLayoutManager(getContext()));
+        //Horizontal
+       //recyclerViewMisRercuerdo.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+        releadRecycler();
+    }
+    private void releadRecycler(){
+        AdapterRecyclerMisRecuerdos adapterCategorias = new AdapterRecyclerMisRecuerdos(leerCategorias());
+        recyclerViewMisRercuerdo.setAdapter(adapterCategorias);
+    }
+    private ArrayList<MisRecuerdos> leerCategorias(){
+
+        ArrayList<MisRecuerdos> listaMisRecuerdos = new ArrayList<>();
+
+        listaMisRecuerdos.add(new MisRecuerdos("Promocion de tus productos","12/12/2022", R.drawable.logo_exper__1_));
+        listaMisRecuerdos.add(new MisRecuerdos("Desayuno circulo de mujeres","01/11/2022",R.drawable.logo_exper__1_));
+        listaMisRecuerdos.add(new MisRecuerdos("Promocion de tus productos","12/12/2022",R.drawable.logo_exper__1_));
+        listaMisRecuerdos.add(new MisRecuerdos("Desayuno circulo de mujeres","01/11/2022",R.drawable.logo_exper__1_));
+        listaMisRecuerdos.add(new MisRecuerdos("Promocion de tus productos","12/12/2022",R.drawable.logo_exper__1_));
+        listaMisRecuerdos.add(new MisRecuerdos("Desayuno circulo de mujeres","01/11/2022",R.drawable.logo_exper__1_));
+        listaMisRecuerdos.add(new MisRecuerdos("Promocion de tus productos","12/12/2022",R.drawable.logo_exper__1_));
+        listaMisRecuerdos.add(new MisRecuerdos("Desayuno circulo de mujeres","01/11/2022",R.drawable.logo_exper__1_));
+        System.out.println(listaMisRecuerdos);
+        return listaMisRecuerdos;
     }
 }

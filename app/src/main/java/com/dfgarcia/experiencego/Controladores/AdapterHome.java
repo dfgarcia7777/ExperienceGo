@@ -21,7 +21,7 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.ViewHolderHome
 
         private ImageView imagen;
         private TextView textViewImagen;
-        TextView textoImagen;
+
 
         public ViewHolderHome(@NonNull View itemView) {
             super(itemView);
